@@ -1,6 +1,7 @@
 import { Ibook } from "./../../../type/books.type";
 import Image from "next/image";
 import ReadBookBtn from "./../../../components/BookDetails/ReadBookBtn";
+import WishListBtn from "./../../../components/BookDetails/WishListBtn";
 
 const getBooks = async () => {
   const response = await fetch("http://localhost:3000/booksData.json");
@@ -130,9 +131,7 @@ const BookDetailsPage = async ({ params }: Iparams) => {
           {/* Action Buttons */}
           <div className="flex gap-4 mt-4">
             <ReadBookBtn singleBook={singleBook} />
-            <button className="btn bg-[#59C6D2] hover:bg-[#42a8b3] text-white border-none px-7 rounded-xl text-lg font-semibold capitalize">
-              Wishlist
-            </button>
+            <WishListBtn singleBook={singleBook} />
           </div>
         </div>
       </div>
