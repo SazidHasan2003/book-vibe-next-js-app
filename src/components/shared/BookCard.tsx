@@ -71,6 +71,12 @@ const BookCard = ({ bookProp }: bookProp) => {
             </svg>
           </div>
         </div>
+
+        <div className="card-actions justify-end mt-4">
+          <button className="btn bg-[#23BE0A] hover:bg-[#1f9e09] text-white w-full rounded-xl text-base font-medium border-none min-h-11 h-11">
+            View Details
+          </button>
+        </div>
       </div>
     </div>
   );
