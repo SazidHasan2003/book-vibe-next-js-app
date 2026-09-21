@@ -52,7 +52,9 @@ const Navbar = () => {
 
           <Link href="/" className="flex items-center justify-center">
             <Image src={logo} alt="Navbar Img" />
-            <a className="btn btn-ghost text-xl">Book Vibe</a>
+          </Link>
+          <Link href="/" className="btn btn-ghost text-xl">
+            Book Vibe
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
