@@ -1,5 +1,6 @@
 import Image from "next/image";
 import heroImg from "../../assets/hero_img.jpg";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -14,10 +15,11 @@ const Hero = () => {
           <h1 className="text-[56px] font-bold">
             Books to freshen up your bookshelf
           </h1>
-
-          <button className="btn btn-primary text-[#ffff] text-[20px] bg-[#23BE0A]">
-            View The List
-          </button>
+          <Link href="/books">
+            <button className="btn btn-primary text-[#ffff] text-[20px] bg-[#23BE0A]">
+              View The List
+            </button>
+          </Link>
         </div>
       </div>
     </div>
