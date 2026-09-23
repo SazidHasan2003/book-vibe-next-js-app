@@ -4,11 +4,16 @@ import ReadBookBtn from "./../../../components/BookDetails/ReadBookBtn";
 import WishListBtn from "./../../../components/BookDetails/WishListBtn";
 
 const getBooks = async () => {
-  const response = await await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,
-  );
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`,
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
+  }
 };
 
 interface Iparams {
